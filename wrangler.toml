@@ -1,0 +1,24 @@
+# wrangler.toml - Configuration for Cloudflare Workers/Pages
+# Generated from wrangler.jsonc
+
+name = "ecomm-platform-ts"
+compatibility_date = "2025-02-24"
+pages_build_output_dir = "./build/client"
+
+# --- Bindings will be added below as needed --- #
+
+# Example D1 Binding (uncomment and configure in Task 2.11)
+# [[d1_databases]]
+# binding = "DB" # i.e. env.DB
+# database_name = "your-database-name"
+# database_id = "your-database-id"
+# preview_database_id = "your-preview-database-id"
+
+# Example Environment Variables/Secrets (configure in Task 4.4, 8.4, 9.1)
+# [vars]
+# FIREBASE_API_KEY = "placeholder"
+# STRIPE_PUBLISHABLE_KEY = "placeholder"
+
+# [secrets]
+# FIREBASE_SERVICE_ACCOUNT_JSON = "placeholder"
+# STRIPE_SECRET_KEY = "placeholder"

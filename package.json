@@ -1,34 +1,40 @@
 {
-  "name": "e-comm-platform",
+  "name": "ecomm-platform",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "react-router build",
-    "dev": "react-router dev",
+    "dev": "npx @react-router/dev dev",
     "start": "wrangler dev",
     "deploy": "npm run build && wrangler pages deploy",
-    "preview": "npm run build && wrangler pages dev"
+    "preview": "npm run build && wrangler pages dev",
+    "typecheck": "wrangler types && react-router typegen && tsc -b"
   },
   "dependencies": {
-    "@chakra-ui/react": "^3.15.0",
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "framer-motion": "^12.6.2",
+    "@react-router/fs-routes": "^7.1.1",
+    "@react-router/node": "^7.1.1",
+    "@react-router/serve": "^7.1.1",
+    "@tanstack/match-sorter-utils": "^8.15.1",
+    "@tanstack/react-query": "^5.56.2",
+    "@tanstack/react-query-devtools": "^5.56.2",
+    "@tanstack/react-table": "^8.9.3",
+    "@react-router/cloudflare": "^7.1.0",
     "isbot": "^5.1.17",
-    "postcss": "^8.5.3",
-    "postcss-import": "^16.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.4.1",
-    "react-router-dom": "^7.4.1",
-    "tailwindcss": "^4.0.17"
+    "react-router": "^7.3.0",
+    "react-toastify": "^11.0.2"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^0.1.11",
-    "@cloudflare/workers-types": "^4.20250303.0",
-    "@react-router/dev": "^7.3.0",
-    "autoprefixer": "^10.4.20",
-    "vite": "^6.2.1",
-    "wrangler": "^3.114.1"
+    "@react-router/dev": "^7.4.1",
+    "@types/node": "^20",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "react-router-devtools": "^1.1.0",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vite-tsconfig-paths": "^5.1.4",
+    "wrangler": "^3.87.0"
   }
 }

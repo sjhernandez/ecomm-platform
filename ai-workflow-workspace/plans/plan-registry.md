@@ -17,7 +17,6 @@ This registry tracks all implementation plans in reverse chronological order (ne
 
 | Status | Plan ID | Mode | Description | Progress |
 |:---:|:---|:---|:---|:---:|
-| 🟡 | [ecomm-platform-core-build-001](ai-workflow-workspace/plans/ecomm-platform-core-build-001) | @mode:semi | Phase 1: Build core E-commerce platform features | 0% |
 | 🟡 | [plan-test-workspace-templates-2025-03-19](AI-workflow-v2/plans/plan-test-workspace-templates-2025-03-19) | @mode:manual | Test of workspace templates | 0% |
 | 🟢 | [plan-esm-migration-2025-05-20](AI-workflow-v2/plans/plan-esm-migration-2025-05-20) | @mode:manual | Migrate framework to ESM modules | 100% |
 

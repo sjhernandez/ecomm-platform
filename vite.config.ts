@@ -7,7 +7,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 
 export default defineConfig({
-
+  root: ".",
   resolve: {
     alias: {
 
@@ -17,10 +17,10 @@ export default defineConfig({
   ssr: {
     target: "webworker",
     noExternal: [
-    
+      "@react-router/dev",
     ],
     resolve: {
-      conditions: ["workerd", "browser"],
+      conditions: ["workerd", "browser", "import", "node"],
     },
     optimizeDeps: {
       include: [

@@ -1,7 +1,11 @@
 import type { AppLoadContext, EntryContext } from "react-router";
+// Restore manual SSR imports
 import { ServerRouter } from "react-router";
 import { isbot } from "isbot";
 import { renderToReadableStream } from "react-dom/server";
+
+// Remove commented-out dev server handler import
+// import { handler } from "@react-router/dev/server";
 
 export default async function handleRequest(
   request: Request,
@@ -9,16 +13,18 @@ export default async function handleRequest(
   responseHeaders: Headers,
   routerContext: EntryContext,
   _loadContext: AppLoadContext,
-) {
+): Promise<Response> {
+  // Keep Promise<Response> return type
+  // Restore the original manual rendering logic
   let shellRendered = false;
   const userAgent = request.headers.get("user-agent");
-  //
+
   const body = await renderToReadableStream(
     <ServerRouter context={routerContext} url={request.url} />,
     {
       onError(error: unknown) {
         responseStatusCode = 500;
-        // Log streaming rendering errors from inside the shell.  Don't log
+        // Log streaming rendering errors from inside the shell. Don't log
         // errors encountered during initial shell rendering since they'll
         // reject and get logged in handleDocumentRequest.
         if (shellRendered) {
@@ -40,4 +46,10 @@ export default async function handleRequest(
     headers: responseHeaders,
     status: responseStatusCode,
   });
+
+  // Remove the placeholder error response
+  /*
+  console.error("handleRequest in entry.server.tsx was called unexpectedly during development!");
+  return new Response("Error: Development server handler misconfiguration.", { status: 500 });
+  */
 }

@@ -7,18 +7,19 @@ pages_build_output_dir = "./build/client"
 
 # --- Bindings will be added below as needed --- #
 
-# Example D1 Binding (uncomment and configure in Task 2.11)
-# [[d1_databases]]
-# binding = "DB" # i.e. env.DB
-# database_name = "your-database-name"
-# database_id = "your-database-id"
-# preview_database_id = "your-preview-database-id"
+# D1 Database Binding (Replace placeholders with actual IDs)
+[[d1_databases]]
+binding = "DB" # Name to access the DB in code (e.g., context.cloudflare.env.DB)
+database_name = "ecomm-platform-db" # Choose a descriptive name
+database_id = "f66b6cc1-0747-4a12-a783-c5154de244d9" # Replace with actual Production DB ID
+preview_database_id = "2be2a55a-9258-436b-a909-5b288e941a57" # Replace with actual Preview DB ID
+
+# KV Namespace Binding for Sessions (Replace placeholders with actual IDs)
+[[kv_namespaces]]
+binding = "SESSION_KV" # Name used in session.server.ts
+id = "14a1f46cc9ab42e6a70dc9b4213b6665" # Replace with actual Production KV ID
+preview_id = "535b88d56d1f4276a8004b829d5e1a4b" # Replace with actual Preview KV ID
 
 # Example Environment Variables/Secrets (configure in Task 4.4, 8.4, 9.1)
 # [vars]
 # FIREBASE_API_KEY = "placeholder"
-# STRIPE_PUBLISHABLE_KEY = "placeholder"
-
-# [secrets]
-# FIREBASE_SERVICE_ACCOUNT_JSON = "placeholder"
-# STRIPE_SECRET_KEY = "placeholder"

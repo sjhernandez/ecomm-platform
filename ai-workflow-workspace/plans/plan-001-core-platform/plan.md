@@ -96,11 +96,11 @@ lastUpdated: "2024-07-30"
 
 **IV. Authentication (Firebase Setup):**
     *   [ ] **4.1.** **OUTPUT:** Provide Instructions for User: Firebase Project Setup.
-    *   [ ] **4.2.** **HUMAN CHECKPOINT:** Confirm User Setup & Approve Firebase Integration.
-    *   [ ] **4.3.** Add Firebase Admin SDK & Client SDK dependencies.
-    *   [ ] **4.4.** Configure Firebase Admin SDK initialization (env vars/secrets).
-    *   [ ] **4.5.** Configure Firebase Client SDK initialization.
-    *   [ ] **4.6.** Create basic Auth context/provider in Remix.
+    *   [X] **4.2.** **HUMAN CHECKPOINT:** Confirm User Setup & Approve Firebase Integration.
+    *   [X] **4.3.** Add Firebase Admin SDK & Client SDK dependencies.
+    *   [X] **4.4.** Configure Firebase Admin SDK initialization (env vars/secrets).
+    *   [X] **4.5.** Configure Firebase Client SDK initialization.
+    *   [X] **4.6.** Create basic Auth context/provider in Remix.
     *   [ ] **4.7.** Create placeholder Login/Signup components (Firebase Client SDK).
     *   [ ] **4.8.** Create basic server-side session management (Remix sessions + JWT).
 
